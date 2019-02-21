@@ -36,6 +36,7 @@ COPY run-vsftpd.sh /usr/sbin/
 RUN chmod +x /usr/sbin/run-vsftpd.sh
 RUN mkdir -p /home/vsftpd/
 RUN chown -R ftp /home/vsftpd/
+RUN usermod -u 33 ftp
 
 VOLUME /home/vsftpd
 VOLUME /var/log/vsftpd
